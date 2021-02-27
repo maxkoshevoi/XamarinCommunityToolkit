@@ -14,6 +14,8 @@ namespace Xamarin.CommunityToolkit.Extensions
 		{
 			_ = page ?? throw new ArgumentNullException(nameof(page));
 
+			throw new Exception("Some exception");
+
 			var messageOptions = new MessageOptions { Message = message };
 			var args = new SnackBarOptions
 			{
