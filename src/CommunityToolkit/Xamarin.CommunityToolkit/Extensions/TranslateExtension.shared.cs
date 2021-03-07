@@ -3,6 +3,7 @@ using System.Resources;
 using Xamarin.CommunityToolkit.Helpers;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace Xamarin.CommunityToolkit.Extensions
@@ -41,12 +42,10 @@ namespace Xamarin.CommunityToolkit.Extensions
 			public ResourceManagerWithIndexer(ResourceManager resourceManager)
 			{
 				this.resourceManager = resourceManager;
-
-				// This instance will be unsubscribed and GCed if no one references it
-				// since LocalizationResourceManager uses WeekEventManger
 				LocalizationResourceManager.Current.PropertyChanged += (sender, e) => OnPropertyChanged(null);
 			}
 
+			[Preserve(Conditional = true)]
 			public string this[string name] =>
 				resourceManager.GetString(name);
 		}
