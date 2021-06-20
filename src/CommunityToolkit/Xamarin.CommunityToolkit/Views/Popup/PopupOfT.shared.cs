@@ -8,7 +8,7 @@ namespace Xamarin.CommunityToolkit.UI.Views
 		TaskCompletionSource<T?> taskCompletionSource;
 
 		/// <summary>
-		/// Initalizes a default implementation of <see cref="Popup{T}"/>.
+		/// Initializes a default implementation of <see cref="Popup{T}"/>.
 		/// </summary>
 		protected Popup() =>
 			taskCompletionSource = new TaskCompletionSource<T?>();

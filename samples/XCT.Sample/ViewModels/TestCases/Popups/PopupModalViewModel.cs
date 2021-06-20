@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 using Xamarin.Forms;
-using Xamarin.CommunityToolkit.Sample.Pages.TestCases.Popups;
+using Xamarin.CommunityToolkit.Sample.Pages.TestCases.PopupFromModal;
 using Xamarin.CommunityToolkit.Extensions;
 
 namespace Xamarin.CommunityToolkit.Sample.ViewModels.TestCases.Popups
@@ -24,7 +24,7 @@ namespace Xamarin.CommunityToolkit.Sample.ViewModels.TestCases.Popups
 
 		void PerformShowPopup() => Navigation.ShowPopup(new SimplePopup());
 
-		async void PerformPushModal() => await Navigation.PushModalAsync(new PopupModalPage());
+		async void PerformPushModal() => await Navigation.PushModalAsync(new PopupFromModalPage());
 
 		async void PerformPopModal()
 		{

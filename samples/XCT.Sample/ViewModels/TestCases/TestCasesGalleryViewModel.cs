@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using Xamarin.CommunityToolkit.Sample.Models;
 using Xamarin.CommunityToolkit.Sample.Pages.TestCases;
-using Xamarin.CommunityToolkit.Sample.Pages.TestCases.Popups;
+using Xamarin.CommunityToolkit.Sample.Pages.TestCases.AlertFromPopup;
+using Xamarin.CommunityToolkit.Sample.Pages.TestCases.PopupFromModal;
 
 namespace Xamarin.CommunityToolkit.Sample.ViewModels.TestCases
 {
@@ -30,9 +31,14 @@ namespace Xamarin.CommunityToolkit.Sample.ViewModels.TestCases
 				"TabView with BindingContext into MainPage and other BindingContext into TabViewItem."),
 
 			new SectionModel(
-				typeof(PopupModalPage),
+				typeof(PopupFromModalPage),
 				"Popup into modal",
 				"Using Popup into modal page show the popup"),
+
+			new SectionModel(
+				typeof(AlertFromPopupPage),
+				"Alert from Popup",
+				"Displaying Alert on top of Popup should maake page even darker"),
 		};
 	}
 }

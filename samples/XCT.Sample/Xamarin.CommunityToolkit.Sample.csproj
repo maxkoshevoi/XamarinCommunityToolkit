@@ -22,6 +22,15 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Compile Update="Pages\TestCases\AlertFromPopup\AlertFromPopupPage.xaml.cs">
+      <DependentUpon>AlertFromPopupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TestCases\AlertFromPopup\SimplePopup.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TestCases\PopupFromModal\PopupFromModalPage.xaml.cs">
+      <DependentUpon>PopupFromModalPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\TestCases\TabViewItemBindingView.xaml.cs">
       <DependentUpon>TabViewItemBindingView.xaml</DependentUpon>
     </Compile>
@@ -36,10 +45,10 @@
   </ItemGroup>
   
   <ItemGroup>
-    <EmbeddedResource Update="Pages\TestCases\Popups\PopupModalPage.xaml">
+    <EmbeddedResource Update="Pages\TestCases\PopupFromModal\PopupFromModalPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\TestCases\Popups\SimplePopup.xaml">
+    <EmbeddedResource Update="Pages\TestCases\PopupFromModal\SimplePopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resx\AppResources.es.resx">
